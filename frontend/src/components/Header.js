@@ -1,13 +1,13 @@
 import React, { Children } from 'react';
 
-export default function Header({title, children}){
+export default function Header({title}){
 
   return (
    <header>
 
   <h1>{title}</h1>
 
-   {children}
+  
    </header>
 
   );
