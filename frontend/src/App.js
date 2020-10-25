@@ -1,4 +1,4 @@
-  import React, {useState} from 'react';
+  import React, {useState, useEffect} from 'react';
   import api from './services/api';
   import './App.css';
   
@@ -8,6 +8,9 @@
   function App() {
 
     const [projects, setProjects] = useState(['Desenvolvimento de app', 'Front-end web']);
+
+    useEffect(() =>{}, []);
+
      
 
     function handAddProject() {
