@@ -9,7 +9,11 @@
 
     const [projects, setProjects] = useState(['Desenvolvimento de app', 'Front-end web']);
 
-    useEffect(() =>{}, []);
+    useEffect(() =>{
+      api.get('./projects').then(response =>{
+        console.log(response);
+      });
+    }, []);
 
      
 
