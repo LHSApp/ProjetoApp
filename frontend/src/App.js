@@ -7,11 +7,11 @@
 
   function App() {
 
-    const [projects, setProjects] = useState(['Desenvolvimento de app', 'Front-end web']);
+    const [projects, setProjects] = useState([]);
 
     useEffect(() =>{
       api.get('./projects').then(response =>{
-        console.log(response);
+        setProjects(response.data);
       });
     }, []);
 
@@ -36,7 +36,7 @@
         <Header title="Projects"/>
 
 <ul>
-  {projects.map(projetc => <li key={projetc}>{projetc}</li>)}
+  {projects.map(projetc => <li key={projetc.id}>{projetc.title}</li>)}
 </ul>
 
   <button type="button" onClick={handAddProject}>Adicionar projeto</button>
